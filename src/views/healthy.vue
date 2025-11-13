@@ -14,11 +14,16 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import request from '../utils/request.js';
 
-const healthData = ref([]);
+interface HealthData {
+  system_name: string;
+  message: string;
+  is_healthy: boolean;
+}
+const healthData = ref<HealthData[]>([]);
 const fetchHealthData = async () => {
   try {
     const res = await request.get('/api/health');

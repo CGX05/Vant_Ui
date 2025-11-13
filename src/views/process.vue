@@ -15,11 +15,17 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import request from '../utils/request.js';
+interface ProcessData {
+  name: string;
+  description: string;
+  statename: string;
+  logfile: string;
+}
 
-const data = ref([]);
+const data = ref<ProcessData[]>([]);
 
 const processInfo = async () => {
   try {

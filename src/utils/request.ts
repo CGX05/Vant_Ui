@@ -1,21 +1,20 @@
 import axios from "axios";
 
-const service = axios.create({
-  baseURL: "http://8.134.127.43:8000",
-  timeout: 10000,
-});
+const service=axios.create({
+    baseURL:"http://8.134.127.43:8000",
+    timeout:10000
+})
 
-// 白名单（不需要 Token 的接口）
-const notoken = [
-  "/api/health",
-  "/health"
-];
+const notoken=[
+    "api/health",
+    "/health"
+]
 
 service.interceptors.request.use(
   (config) => {
     // 检查当前请求的 URL 是否在白名单中
     const isWhiteList = notoken.some(url => 
-      config.url.includes(url)
+      config.url?.includes(url)
     );
 
     // 如果不在白名单中，则添加 Token

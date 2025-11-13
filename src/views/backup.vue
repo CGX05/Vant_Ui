@@ -14,11 +14,16 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { showToast } from 'vant'
 import { ref, onMounted } from "vue";
 import request from "../utils/request.js";
-const list = ref([]); //备份列表数据
+interface BackupData {
+    filename: string;
+    file_size: string;
+    create_time: string;
+}
+const list = ref<BackupData[]>([]); //备份列表数据
 const getList = async () => {
     try{
         const res = await request.get("/api/backups");

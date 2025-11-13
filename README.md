@@ -1,38 +1,35 @@
-# app_monitor
+# 应用监控
 
-This template should help get you started developing with Vue 3 in Vite.
+基于 Vue 3 + TypeScript + Vant UI 构建的移动端应用监控系统。
 
-## Recommended IDE Setup
+### ✨ 特性
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- 📱 移动端优先，使用 Vant UI 组件库
+- 💪 TypeScript 提供类型安全
+- 📦 模块化开发，代码结构清晰
 
-## Recommended Browser Setup
+### 技术栈
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+**框架**：Vue3
+**开发语言**：TypeScript
+**UI框架**：Vant UI
 
-## Customize configuration
+### 环境要求
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Node.js : 22.14.0
 
-## Project Setup
+npm: 10.9.2
 
-```sh
+### 快速开始
+
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
-```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+### 相关依赖
+ "dependencies": {
+    "axios": "^1.13.2",
+    "vant": "^4.9.21",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
+  }

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import navigation from "../components/navigation.vue";
 
 </script>
